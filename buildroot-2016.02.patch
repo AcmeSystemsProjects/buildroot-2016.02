@@ -1,0 +1,558 @@
+diff --git a/board/acmesystems/acme-acqua/rootfs_overlay/boot/tmp b/board/acmesystems/acme-acqua/rootfs_overlay/boot/tmp
+new file mode 100644
+index 0000000..e69de29
+diff --git a/board/acmesystems/acme-acqua/rootfs_overlay/etc/fstab b/board/acmesystems/acme-acqua/rootfs_overlay/etc/fstab
+new file mode 100644
+index 0000000..4017aef
+--- /dev/null
++++ b/board/acmesystems/acme-acqua/rootfs_overlay/etc/fstab
+@@ -0,0 +1,9 @@
++# <file system>	<mount pt>	<type>	<options>	<dump>	<pass>
++/dev/root	/		ext2	rw,noauto	0	1
++proc		/proc		proc	defaults	0	0
++devpts		/dev/pts	devpts	defaults,gid=5,mode=620	0	0
++tmpfs		/dev/shm	tmpfs	mode=0777	0	0
++tmpfs		/tmp		tmpfs	mode=1777	0	0
++tmpfs		/run		tmpfs	mode=0755,nosuid,nodev	0	0
++sysfs		/sys		sysfs	defaults	0	0
++/dev/mmcblk0p1 /boot vfat noatime 0 1
+diff --git a/board/acmesystems/acme-acqua/rootfs_overlay/etc/network/interfaces b/board/acmesystems/acme-acqua/rootfs_overlay/etc/network/interfaces
+new file mode 100644
+index 0000000..b907c57
+--- /dev/null
++++ b/board/acmesystems/acme-acqua/rootfs_overlay/etc/network/interfaces
+@@ -0,0 +1,25 @@
++auto lo
++iface lo inet loopback
++
++auto eth0
++iface eth0 inet dhcp
++	hwaddress ether 00:01:04:1b:2C:1F
++
++#iface eth0 inet static
++#	address 192.168.1.244
++#	netmask 255.255.255.0
++#	gateway 192.168.1.1
++
++#pre-up modprobe g_ether
++#auto usb0
++#iface usb0 inet static
++#	address 192.168.10.10
++#	netmask 255.255.255.0
++#	gateway 192.168.10.20
++
++#auto wlan0
++#iface wlan0 inet dhcp
++#    wireless-essid any
++#    pre-up wpa_supplicant -i wlan0 -c /boot/wpa_supplicant.conf -B
++#    post-down killall -q wpa_supplicant
++
+diff --git a/board/acmesystems/acme-aria/rootfs_overlay/boot/tmp b/board/acmesystems/acme-aria/rootfs_overlay/boot/tmp
+new file mode 100644
+index 0000000..e69de29
+diff --git a/board/acmesystems/acme-aria/rootfs_overlay/etc/fstab b/board/acmesystems/acme-aria/rootfs_overlay/etc/fstab
+new file mode 100644
+index 0000000..4017aef
+--- /dev/null
++++ b/board/acmesystems/acme-aria/rootfs_overlay/etc/fstab
+@@ -0,0 +1,9 @@
++# <file system>	<mount pt>	<type>	<options>	<dump>	<pass>
++/dev/root	/		ext2	rw,noauto	0	1
++proc		/proc		proc	defaults	0	0
++devpts		/dev/pts	devpts	defaults,gid=5,mode=620	0	0
++tmpfs		/dev/shm	tmpfs	mode=0777	0	0
++tmpfs		/tmp		tmpfs	mode=1777	0	0
++tmpfs		/run		tmpfs	mode=0755,nosuid,nodev	0	0
++sysfs		/sys		sysfs	defaults	0	0
++/dev/mmcblk0p1 /boot vfat noatime 0 1
+diff --git a/board/acmesystems/acme-aria/rootfs_overlay/etc/network/interfaces b/board/acmesystems/acme-aria/rootfs_overlay/etc/network/interfaces
+new file mode 100644
+index 0000000..03bdfaa
+--- /dev/null
++++ b/board/acmesystems/acme-aria/rootfs_overlay/etc/network/interfaces
+@@ -0,0 +1,24 @@
++auto lo
++iface lo inet loopback
++
++auto eth0
++iface eth0 inet dhcp
++	hwaddress ether 00:01:04:1b:2C:20
++
++#iface eth0 inet static
++#	address 192.168.1.244
++#	netmask 255.255.255.0
++#	gateway 192.168.1.1
++
++#pre-up modprobe g_ether
++#auto usb0
++#iface usb0 inet static
++#	address 192.168.10.10
++#	netmask 255.255.255.0
++#	gateway 192.168.10.20
++
++#auto wlan0
++#iface wlan0 inet dhcp
++#    wireless-essid any
++#    pre-up wpa_supplicant -i wlan0 -c /boot/wpa_supplicant.conf -B
++#    post-down killall -q wpa_supplicant
+diff --git a/board/acmesystems/acme-arietta/rootfs_overlay/boot/tmp b/board/acmesystems/acme-arietta/rootfs_overlay/boot/tmp
+new file mode 100644
+index 0000000..e69de29
+diff --git a/board/acmesystems/acme-arietta/rootfs_overlay/etc/fstab b/board/acmesystems/acme-arietta/rootfs_overlay/etc/fstab
+new file mode 100644
+index 0000000..4017aef
+--- /dev/null
++++ b/board/acmesystems/acme-arietta/rootfs_overlay/etc/fstab
+@@ -0,0 +1,9 @@
++# <file system>	<mount pt>	<type>	<options>	<dump>	<pass>
++/dev/root	/		ext2	rw,noauto	0	1
++proc		/proc		proc	defaults	0	0
++devpts		/dev/pts	devpts	defaults,gid=5,mode=620	0	0
++tmpfs		/dev/shm	tmpfs	mode=0777	0	0
++tmpfs		/tmp		tmpfs	mode=1777	0	0
++tmpfs		/run		tmpfs	mode=0755,nosuid,nodev	0	0
++sysfs		/sys		sysfs	defaults	0	0
++/dev/mmcblk0p1 /boot vfat noatime 0 1
+diff --git a/board/acmesystems/acme-arietta/rootfs_overlay/etc/network/interfaces b/board/acmesystems/acme-arietta/rootfs_overlay/etc/network/interfaces
+new file mode 100644
+index 0000000..5bb2121
+--- /dev/null
++++ b/board/acmesystems/acme-arietta/rootfs_overlay/etc/network/interfaces
+@@ -0,0 +1,14 @@
++auto lo
++iface lo inet loopback
++
++auto usb0
++iface usb0 inet static
++	address 192.168.10.10
++	netmask 255.255.255.0
++	gateway 192.168.10.20
++
++auto wlan0
++iface wlan0 inet dhcp
++    wireless-essid any
++    pre-up wpa_supplicant -i wlan0 -c /boot/wpa_supplicant.conf -B
++    post-down killall -q wpa_supplicant
+diff --git a/board/acmesystems/acme-foxg20/boot/tmp b/board/acmesystems/acme-foxg20/boot/tmp
+new file mode 100644
+index 0000000..e69de29
+diff --git a/board/acmesystems/acme-foxg20/rootfs_overlay/etc/fstab b/board/acmesystems/acme-foxg20/rootfs_overlay/etc/fstab
+new file mode 100644
+index 0000000..4017aef
+--- /dev/null
++++ b/board/acmesystems/acme-foxg20/rootfs_overlay/etc/fstab
+@@ -0,0 +1,9 @@
++# <file system>	<mount pt>	<type>	<options>	<dump>	<pass>
++/dev/root	/		ext2	rw,noauto	0	1
++proc		/proc		proc	defaults	0	0
++devpts		/dev/pts	devpts	defaults,gid=5,mode=620	0	0
++tmpfs		/dev/shm	tmpfs	mode=0777	0	0
++tmpfs		/tmp		tmpfs	mode=1777	0	0
++tmpfs		/run		tmpfs	mode=0755,nosuid,nodev	0	0
++sysfs		/sys		sysfs	defaults	0	0
++/dev/mmcblk0p1 /boot vfat noatime 0 1
+diff --git a/board/acmesystems/acme-foxg20/rootfs_overlay/etc/network/interfaces b/board/acmesystems/acme-foxg20/rootfs_overlay/etc/network/interfaces
+new file mode 100644
+index 0000000..03bdfaa
+--- /dev/null
++++ b/board/acmesystems/acme-foxg20/rootfs_overlay/etc/network/interfaces
+@@ -0,0 +1,24 @@
++auto lo
++iface lo inet loopback
++
++auto eth0
++iface eth0 inet dhcp
++	hwaddress ether 00:01:04:1b:2C:20
++
++#iface eth0 inet static
++#	address 192.168.1.244
++#	netmask 255.255.255.0
++#	gateway 192.168.1.1
++
++#pre-up modprobe g_ether
++#auto usb0
++#iface usb0 inet static
++#	address 192.168.10.10
++#	netmask 255.255.255.0
++#	gateway 192.168.10.20
++
++#auto wlan0
++#iface wlan0 inet dhcp
++#    wireless-essid any
++#    pre-up wpa_supplicant -i wlan0 -c /boot/wpa_supplicant.conf -B
++#    post-down killall -q wpa_supplicant
+diff --git a/board/acmesystems/aria-g25/readme.txt b/board/acmesystems/aria-g25/readme.txt
+deleted file mode 100644
+index 734ccd2..0000000
+--- a/board/acmesystems/aria-g25/readme.txt
++++ /dev/null
+@@ -1,51 +0,0 @@
+-Build instructions
+-==================
+-
+-As a regular user configure and then build:
+-
+-$ make acmesystems_aria_g25_128mb_defconfig (128MB RAM variant)
+-  or...
+-$ make acmesystems_aria_g25_256mb_defconfig (256MB RAM variant)
+-
+-$ make
+-
+-Writing to the MicroSD card
+-===========================
+-
+-Assuming your Aria G25 baseboard has a MicroSD socket, for example with
+-the Terra baseboard, you'll need a blank MicroSD (obviously) initialized
+-in a particular way to be able to boot from it.
+-
+-Assuming the card is seen as /dev/sdb in your PC/laptop/other device
+-you'll need to run the following commands as root or via sudo.
+-
+-Make sure all of the card partitions are unmounted before starting.
+-
+-First we'll need to create two partitions:
+-
+-# sfdisk -uM /dev/sdb <<EOF
+-,32,6
+-;
+-EOF
+-
+-Then we'll need to create the empty filesystems:
+-
+-# mkdosfs -n SD_BOOT /dev/sdb1
+-# mkfs.ext4 -L SD_ROOT /dev/sdb2
+-
+-We'll populate the first partition (boot) with the relevant files:
+-
+-# mount /dev/sdb1 /mnt
+-# cp output/images/at91bootstrap.bin /mnt/BOOT.BIN
+-# cp output/images/zImage /mnt
+-# cp output/images/at91-ariag25.dtb /mnt
+-# umount /mnt
+-
+-And the root filesystem afterwards:
+-
+-# mount /dev/sdb2 /mnt
+-# tar -C /mnt output/images/rootfs.tar
+-# umount /mnt
+-
+-You're done, insert the MicroSD card in the slot and enjoy.
+-
+diff --git a/board/acmesystems/arietta-g25/genimage.cfg b/board/acmesystems/arietta-g25/genimage.cfg
+deleted file mode 100644
+index 1080b0e..0000000
+--- a/board/acmesystems/arietta-g25/genimage.cfg
++++ /dev/null
+@@ -1,35 +0,0 @@
+-# Minimal SD card image for the Acmesystems Arietta G25
+-#
+-image boot.vfat {
+-	vfat {
+-		file zImage {
+-			image = "zImage"
+-		}
+-
+-		file acme-arietta.dtb {
+-			image = "at91-ariag25.dtb"
+-		}
+-
+-		file boot.bin {
+-			image = "at91sam9x5_arietta-sdcardboot-linux-zimage-dt-3.7.bin"
+-		}
+-	}
+-	size = 16M
+-}
+-
+-image sdcard.img {
+-	hdimage {
+-	}
+-
+-	partition boot {
+-		partition-type = 0xC
+-		bootable = "true"
+-		image = "boot.vfat"
+-	}
+-
+-	partition rootfs {
+-		partition-type = 0x83
+-		image = "rootfs.ext4"
+-		size = 512M
+-	}
+-}
+diff --git a/board/acmesystems/arietta-g25/post-image.sh b/board/acmesystems/arietta-g25/post-image.sh
+deleted file mode 100755
+index c82b189..0000000
+--- a/board/acmesystems/arietta-g25/post-image.sh
++++ /dev/null
+@@ -1,16 +0,0 @@
+-#!/bin/sh
+-
+-BOARD_DIR="$(dirname $0)"
+-GENIMAGE_CFG="${BOARD_DIR}/genimage.cfg"
+-GENIMAGE_TMP="${BUILD_DIR}/genimage.tmp"
+-
+-rm -rf "${GENIMAGE_TMP}"
+-
+-genimage                               \
+-	--rootpath "${TARGET_DIR}"     \
+-	--tmppath "${GENIMAGE_TMP}"    \
+-	--inputpath "${BINARIES_DIR}"  \
+-	--outputpath "${BINARIES_DIR}" \
+-	--config "${GENIMAGE_CFG}"
+-
+-exit $?
+diff --git a/board/acmesystems/arietta-g25/readme.txt b/board/acmesystems/arietta-g25/readme.txt
+deleted file mode 100644
+index 485e275..0000000
+--- a/board/acmesystems/arietta-g25/readme.txt
++++ /dev/null
+@@ -1,45 +0,0 @@
+-Acmesystems Arietta G25
+-
+-Intro
+-=====
+-
+-This default configuration will allow you to start experimenting with the
+-buildroot environment for the Arietta G25. With the current configuration
+-it will bring-up the board, and allow access through the serial console.
+-
+-You can find additional informations, tutorials and a very comprehensive
+-documentation on http://www.acmesystems.it/arietta.
+-
+-Build instructions
+-==================
+-
+-To build an image for the arietta g25 choose the configuration
+-corresponding to the arietta variant.
+-
+-For 128MB RAM variant type:
+-
+-$ make acmesystems_arietta_g25_128mb_defconfig
+-
+-else for 256MB RAM variant type:
+-
+-$ make acmesystems_arietta_g25_256mb_defconfig
+-
+-then:
+-
+-$ make
+-
+-How to write the microSD card
+-=============================
+-
+-Once the build process is finished you will have an image called "sdcard.img"
+-in the output/images/ directory.
+-
+-Copy the bootable "sdcard.img" onto an SD card with "dd":
+-
+-  $ sudo dd if=output/images/sdcard.img of=/dev/sdX
+-
+-Insert the microSD card into the arietta slot and power it.
+-
+-The image just built is fairly basic and the only output
+-you will get is on serial console, please consider to use a DPI
+-cable (http://www.acmesystems.it/DPI)
+diff --git a/configs/acme-acqua_defconfig b/configs/acme-acqua_defconfig
+new file mode 100644
+index 0000000..d9dca4e
+--- /dev/null
++++ b/configs/acme-acqua_defconfig
+@@ -0,0 +1,16 @@
++BR2_arm=y
++BR2_cortex_a5=y
++BR2_ARM_EABIHF=y
++BR2_ARM_FPU_VFPV4D16=y
++BR2_ARM_INSTRUCTIONS_THUMB2=y
++BR2_KERNEL_HEADERS_VERSION=y
++BR2_DEFAULT_KERNEL_VERSION="4.4.5"
++BR2_PACKAGE_HOST_LINUX_HEADERS_CUSTOM_4_4=y
++BR2_TARGET_GENERIC_ROOT_PASSWD="acmesystems"
++BR2_ROOTFS_OVERLAY="$(TOPDIR)/board/acmesystems/acme-acqua/rootfs_overlay"
++BR2_PACKAGE_LINUX_FIRMWARE=y
++BR2_PACKAGE_LINUX_FIRMWARE_RALINK_RT2XX=y
++BR2_PACKAGE_DROPBEAR=y
++BR2_PACKAGE_IW=y
++BR2_PACKAGE_WPA_SUPPLICANT=y
++BR2_PACKAGE_WPA_SUPPLICANT_AP_SUPPORT=y
+diff --git a/configs/acme-aria_defconfig b/configs/acme-aria_defconfig
+new file mode 100644
+index 0000000..46b558e
+--- /dev/null
++++ b/configs/acme-aria_defconfig
+@@ -0,0 +1,12 @@
++BR2_arm=y
++BR2_KERNEL_HEADERS_VERSION=y
++BR2_DEFAULT_KERNEL_VERSION="4.4.5"
++BR2_PACKAGE_HOST_LINUX_HEADERS_CUSTOM_4_4=y
++BR2_TARGET_GENERIC_ROOT_PASSWD="acmesystems"
++BR2_ROOTFS_OVERLAY="$(TOPDIR)/board/acmesystems/acme-aria/rootfs_overlay"
++BR2_PACKAGE_LINUX_FIRMWARE=y
++BR2_PACKAGE_LINUX_FIRMWARE_RALINK_RT2XX=y
++BR2_PACKAGE_DROPBEAR=y
++BR2_PACKAGE_IW=y
++BR2_PACKAGE_WPA_SUPPLICANT=y
++BR2_PACKAGE_WPA_SUPPLICANT_AP_SUPPORT=y
+diff --git a/configs/acme-arietta_defconfig b/configs/acme-arietta_defconfig
+new file mode 100644
+index 0000000..9082e9d
+--- /dev/null
++++ b/configs/acme-arietta_defconfig
+@@ -0,0 +1,12 @@
++BR2_arm=y
++BR2_KERNEL_HEADERS_VERSION=y
++BR2_DEFAULT_KERNEL_VERSION="4.4.5"
++BR2_PACKAGE_HOST_LINUX_HEADERS_CUSTOM_4_4=y
++BR2_TARGET_GENERIC_ROOT_PASSWD="acmesystems"
++BR2_ROOTFS_OVERLAY="$(TOPDIR)/board/acmesystems/acme-arietta/rootfs_overlay"
++BR2_PACKAGE_LINUX_FIRMWARE=y
++BR2_PACKAGE_LINUX_FIRMWARE_RALINK_RT2XX=y
++BR2_PACKAGE_DROPBEAR=y
++BR2_PACKAGE_IW=y
++BR2_PACKAGE_WPA_SUPPLICANT=y
++BR2_PACKAGE_WPA_SUPPLICANT_AP_SUPPORT=y
+diff --git a/configs/acme-foxg20_defconfig b/configs/acme-foxg20_defconfig
+new file mode 100644
+index 0000000..46b558e
+--- /dev/null
++++ b/configs/acme-foxg20_defconfig
+@@ -0,0 +1,12 @@
++BR2_arm=y
++BR2_KERNEL_HEADERS_VERSION=y
++BR2_DEFAULT_KERNEL_VERSION="4.4.5"
++BR2_PACKAGE_HOST_LINUX_HEADERS_CUSTOM_4_4=y
++BR2_TARGET_GENERIC_ROOT_PASSWD="acmesystems"
++BR2_ROOTFS_OVERLAY="$(TOPDIR)/board/acmesystems/acme-aria/rootfs_overlay"
++BR2_PACKAGE_LINUX_FIRMWARE=y
++BR2_PACKAGE_LINUX_FIRMWARE_RALINK_RT2XX=y
++BR2_PACKAGE_DROPBEAR=y
++BR2_PACKAGE_IW=y
++BR2_PACKAGE_WPA_SUPPLICANT=y
++BR2_PACKAGE_WPA_SUPPLICANT_AP_SUPPORT=y
+diff --git a/configs/acmesystems_aria_g25_128mb_defconfig b/configs/acmesystems_aria_g25_128mb_defconfig
+deleted file mode 100644
+index b619166..0000000
+--- a/configs/acmesystems_aria_g25_128mb_defconfig
++++ /dev/null
+@@ -1,21 +0,0 @@
+-# Architecture
+-BR2_arm=y
+-
+-# Linux headers same as kernel, a 4.1 series
+-BR2_PACKAGE_HOST_LINUX_HEADERS_CUSTOM_4_1=y
+-
+-# Kernel
+-BR2_LINUX_KERNEL=y
+-BR2_LINUX_KERNEL_CUSTOM_VERSION=y
+-BR2_LINUX_KERNEL_CUSTOM_VERSION_VALUE="4.1.1"
+-BR2_LINUX_KERNEL_DEFCONFIG="at91_dt"
+-BR2_LINUX_KERNEL_ZIMAGE=y
+-BR2_LINUX_KERNEL_DTS_SUPPORT=y
+-BR2_LINUX_KERNEL_INTREE_DTS_NAME="at91-ariag25"
+-
+-# Bootloader
+-BR2_TARGET_AT91BOOTSTRAP3=y
+-BR2_TARGET_AT91BOOTSTRAP3_CUSTOM_GIT=y
+-BR2_TARGET_AT91BOOTSTRAP3_CUSTOM_REPO_URL="git://github.com/tanzilli/at91bootstrap.git"
+-BR2_TARGET_AT91BOOTSTRAP3_CUSTOM_REPO_VERSION="3f957cec253abc80fd10c733e5e596f46e1aef56"
+-BR2_TARGET_AT91BOOTSTRAP3_DEFCONFIG="aria-128m"
+diff --git a/configs/acmesystems_aria_g25_256mb_defconfig b/configs/acmesystems_aria_g25_256mb_defconfig
+deleted file mode 100644
+index 584d8b4..0000000
+--- a/configs/acmesystems_aria_g25_256mb_defconfig
++++ /dev/null
+@@ -1,21 +0,0 @@
+-# Architecture
+-BR2_arm=y
+-
+-# Linux headers same as kernel, a 4.1 series
+-BR2_PACKAGE_HOST_LINUX_HEADERS_CUSTOM_4_1=y
+-
+-# Kernel
+-BR2_LINUX_KERNEL=y
+-BR2_LINUX_KERNEL_CUSTOM_VERSION=y
+-BR2_LINUX_KERNEL_CUSTOM_VERSION_VALUE="4.1.1"
+-BR2_LINUX_KERNEL_DEFCONFIG="at91_dt"
+-BR2_LINUX_KERNEL_ZIMAGE=y
+-BR2_LINUX_KERNEL_DTS_SUPPORT=y
+-BR2_LINUX_KERNEL_INTREE_DTS_NAME="at91-ariag25"
+-
+-# Bootloader
+-BR2_TARGET_AT91BOOTSTRAP3=y
+-BR2_TARGET_AT91BOOTSTRAP3_CUSTOM_GIT=y
+-BR2_TARGET_AT91BOOTSTRAP3_CUSTOM_REPO_URL="git://github.com/tanzilli/at91bootstrap.git"
+-BR2_TARGET_AT91BOOTSTRAP3_CUSTOM_REPO_VERSION="3f957cec253abc80fd10c733e5e596f46e1aef56"
+-BR2_TARGET_AT91BOOTSTRAP3_DEFCONFIG="aria-256m"
+diff --git a/configs/acmesystems_arietta_g25_128mb_defconfig b/configs/acmesystems_arietta_g25_128mb_defconfig
+deleted file mode 100644
+index 44cb4e5..0000000
+--- a/configs/acmesystems_arietta_g25_128mb_defconfig
++++ /dev/null
+@@ -1,31 +0,0 @@
+-# Architecture
+-BR2_arm=y
+-
+-# Toolchain
+-BR2_PACKAGE_HOST_LINUX_HEADERS_CUSTOM_4_1=y
+-
+-# Kernel
+-BR2_LINUX_KERNEL=y
+-BR2_LINUX_KERNEL_CUSTOM_VERSION=y
+-BR2_LINUX_KERNEL_CUSTOM_VERSION_VALUE="4.1.1"
+-BR2_LINUX_KERNEL_DEFCONFIG="at91_dt"
+-BR2_LINUX_KERNEL_ZIMAGE=y
+-BR2_LINUX_KERNEL_DTS_SUPPORT=y
+-BR2_LINUX_KERNEL_INTREE_DTS_NAME="at91-ariag25"
+-BR2_LINUX_KERNEL_XZ=y
+-
+-# Bootloader
+-BR2_TARGET_AT91BOOTSTRAP3=y
+-BR2_TARGET_AT91BOOTSTRAP3_CUSTOM_GIT=y
+-BR2_TARGET_AT91BOOTSTRAP3_CUSTOM_REPO_URL="git://github.com/tanzilli/at91bootstrap.git"
+-BR2_TARGET_AT91BOOTSTRAP3_CUSTOM_REPO_VERSION="cedbde4b36695b715f469f4872f47e5cc8115000"
+-BR2_TARGET_AT91BOOTSTRAP3_DEFCONFIG="arietta-128m"
+-
+-# Image
+-BR2_ROOTFS_POST_IMAGE_SCRIPT="board/acmesystems/arietta-g25/post-image.sh"
+-BR2_TARGET_ROOTFS_EXT2=y
+-BR2_TARGET_ROOTFS_EXT2_4=y
+-# BR2_TARGET_ROOTFS_TAR is not set
+-BR2_PACKAGE_HOST_GENIMAGE=y
+-BR2_PACKAGE_HOST_DOSFSTOOLS=y
+-BR2_PACKAGE_HOST_MTOOLS=y
+diff --git a/configs/acmesystems_arietta_g25_256mb_defconfig b/configs/acmesystems_arietta_g25_256mb_defconfig
+deleted file mode 100644
+index 48a8190..0000000
+--- a/configs/acmesystems_arietta_g25_256mb_defconfig
++++ /dev/null
+@@ -1,31 +0,0 @@
+-# Architecture
+-BR2_arm=y
+-
+-# Toolchain
+-BR2_PACKAGE_HOST_LINUX_HEADERS_CUSTOM_4_1=y
+-
+-# Kernel
+-BR2_LINUX_KERNEL=y
+-BR2_LINUX_KERNEL_CUSTOM_VERSION=y
+-BR2_LINUX_KERNEL_CUSTOM_VERSION_VALUE="4.1.1"
+-BR2_LINUX_KERNEL_DEFCONFIG="at91_dt"
+-BR2_LINUX_KERNEL_ZIMAGE=y
+-BR2_LINUX_KERNEL_DTS_SUPPORT=y
+-BR2_LINUX_KERNEL_INTREE_DTS_NAME="at91-ariag25"
+-BR2_LINUX_KERNEL_XZ=y
+-
+-# Bootloader
+-BR2_TARGET_AT91BOOTSTRAP3=y
+-BR2_TARGET_AT91BOOTSTRAP3_CUSTOM_GIT=y
+-BR2_TARGET_AT91BOOTSTRAP3_CUSTOM_REPO_URL="git://github.com/tanzilli/at91bootstrap.git"
+-BR2_TARGET_AT91BOOTSTRAP3_CUSTOM_REPO_VERSION="cedbde4b36695b715f469f4872f47e5cc8115000"
+-BR2_TARGET_AT91BOOTSTRAP3_DEFCONFIG="arietta-256m"
+-
+-# Image
+-BR2_ROOTFS_POST_IMAGE_SCRIPT="board/acmesystems/arietta-g25/post-image.sh"
+-BR2_TARGET_ROOTFS_EXT2=y
+-BR2_TARGET_ROOTFS_EXT2_4=y
+-# BR2_TARGET_ROOTFS_TAR is not set
+-BR2_PACKAGE_HOST_GENIMAGE=y
+-BR2_PACKAGE_HOST_DOSFSTOOLS=y
+-BR2_PACKAGE_HOST_MTOOLS=y
