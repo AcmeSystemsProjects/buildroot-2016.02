@@ -1,0 +1,6 @@
+config BR2_PACKAGE_FOXG20PROJECT
+        bool "foxg20project"
+        help
+          This is a comment that explains what libfoo is.
+
+          http://tanzilli.com/tanzolab
